@@ -42,6 +42,8 @@ public class Book_Details extends javax.swing.JFrame {
         bookid = new javax.swing.JTextField();
         show = new javax.swing.JButton();
         back_btn = new javax.swing.JButton();
+        closebtn = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
         res = new javax.swing.JPanel();
         book_name = new javax.swing.JLabel();
         imglogo = new javax.swing.JLabel();
@@ -51,7 +53,6 @@ public class Book_Details extends javax.swing.JFrame {
         year = new javax.swing.JLabel();
         stock = new javax.swing.JLabel();
         author = new javax.swing.JLabel();
-        closebtn = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -78,6 +79,17 @@ public class Book_Details extends javax.swing.JFrame {
         back_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 back_btnActionPerformed(evt);
+            }
+        });
+
+        closebtn.setForeground(new java.awt.Color(102, 255, 255));
+        closebtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        closebtn.setText("X");
+        closebtn.setToolTipText("");
+        closebtn.setOpaque(true);
+        closebtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                closebtnMouseClicked(evt);
             }
         });
 
@@ -148,16 +160,7 @@ public class Book_Details extends javax.swing.JFrame {
                 .addGap(44, 44, 44))
         );
 
-        closebtn.setForeground(new java.awt.Color(102, 255, 255));
-        closebtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        closebtn.setText("X");
-        closebtn.setToolTipText("");
-        closebtn.setOpaque(true);
-        closebtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                closebtnMouseClicked(evt);
-            }
-        });
+        jScrollPane1.setViewportView(res);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -182,9 +185,10 @@ public class Book_Details extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(closebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                        .addComponent(res, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(14, 14, 14))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,7 +207,7 @@ public class Book_Details extends javax.swing.JFrame {
                     .addComponent(closebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
-                .addComponent(res, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE))
         );
 
         pack();
@@ -314,6 +318,7 @@ public class Book_Details extends javax.swing.JFrame {
     private javax.swing.JLabel imglogo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel publications;
     private javax.swing.JPanel res;
     private javax.swing.JLabel res_bookid;
