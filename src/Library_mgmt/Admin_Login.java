@@ -104,6 +104,7 @@ public class Admin_Login extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icons8_user_male_16.png"))); // NOI18N
 
         back_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icons8_back_32.png"))); // NOI18N
+        back_btn.setBorder(null);
         back_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 back_btnActionPerformed(evt);

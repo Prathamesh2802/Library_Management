@@ -141,6 +141,7 @@ public class Add_Books extends javax.swing.JFrame {
         });
 
         back_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icons8_back_32.png"))); // NOI18N
+        back_btn.setBorder(null);
 
         department.setModel(new javax.swing.SpinnerListModel(new String[] {"Electronics and Telecommunication", "Computer Science", "Artificial Intelligence and Machine Learning", "Mechanical Engineering", "Civil Engineering", "Information Technology", "Electrical Engineering"}));
 
