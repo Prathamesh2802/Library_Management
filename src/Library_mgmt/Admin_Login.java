@@ -228,6 +228,7 @@ public class Admin_Login extends javax.swing.JFrame {
             if(rs.next())
             {
                JOptionPane.showMessageDialog(null, "Login Successful", "Login Success", JOptionPane.DEFAULT_OPTION);
+               setVisible(false);
                new Admin_Dashboard().setVisible(true);
             }
             else
@@ -241,7 +242,6 @@ public class Admin_Login extends javax.swing.JFrame {
         {
             e.printStackTrace();
         }
-        setVisible(false);
     
     }//GEN-LAST:event_loginActionPerformed
 

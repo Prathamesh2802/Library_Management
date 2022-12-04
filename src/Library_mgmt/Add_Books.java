@@ -142,6 +142,11 @@ public class Add_Books extends javax.swing.JFrame {
 
         back_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icons8_back_32.png"))); // NOI18N
         back_btn.setBorder(null);
+        back_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                back_btnActionPerformed(evt);
+            }
+        });
 
         department.setModel(new javax.swing.SpinnerListModel(new String[] {"Electronics and Telecommunication", "Computer Science", "Artificial Intelligence and Machine Learning", "Mechanical Engineering", "Civil Engineering", "Information Technology", "Electrical Engineering"}));
 
@@ -344,6 +349,12 @@ public class Add_Books extends javax.swing.JFrame {
     private void bookidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bookidActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bookidActionPerformed
+
+    private void back_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_btnActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new Admin_Dashboard().setVisible(true);
+    }//GEN-LAST:event_back_btnActionPerformed
 
     /**
      * @param args the command line arguments
