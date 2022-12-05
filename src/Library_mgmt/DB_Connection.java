@@ -11,21 +11,38 @@ import java.sql.*;
  */
 public class DB_Connection {
         Connection c;
-         String url="library_management";
+
+        String url="library_mgmt";
          public DB_Connection() {
-                
-             
-             
+
              try {
                                                     
                   Statement s;
 	Class.forName("com.mysql.cj.jdbc.Driver");
 //                  c = DriverManager.getConnection("jdbc:mysql:///library_management","Pinu","pinu");
-                  c = DriverManager.getConnection("jdbc:mysql:///"+url,"Pinu","pinu");
+                  c = DriverManager.getConnection("jdbc:mysql://db4free.net:3306/"+url,"prathamesh148","v4qpfh9XZmUHk@#");
 	s = c.createStatement();
 			
 	} catch(Exception e) {
 	System.out.println(e); 
 	}
+
+// Localhost Connection
+//         String url="library_management";
+//         public DB_Connection() {
+//                
+//             
+//             
+//             try {
+//                                                    
+//                  Statement s;
+//	Class.forName("com.mysql.cj.jdbc.Driver");
+////                  c = DriverManager.getConnection("jdbc:mysql:///library_management","Pinu","pinu");
+//                  c = DriverManager.getConnection("jdbc:mysql:///"+url,"Pinu","pinu");
+//	s = c.createStatement();
+//			
+//	} catch(Exception e) {
+//	System.out.println(e); 
+//	}
             }
 }
