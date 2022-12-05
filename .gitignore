@@ -1,3 +1,4 @@
 /dist/
-/build/classes/Library_mgmt/DB_Connection
-/src/Library_mgmt/DB_Connection
+
+build/classes/Library_mgmt/DB_Connection.class
+src/Library_mgmt/DB_Connection.java
