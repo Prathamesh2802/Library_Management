@@ -20,7 +20,7 @@ public class DB_Connection {
                   Statement s;
 	Class.forName("com.mysql.cj.jdbc.Driver");
 //                  c = DriverManager.getConnection("jdbc:mysql:///library_management","Pinu","pinu");
-                  c = DriverManager.getConnection("jdbc:mysql://db4free.net:3306/"+url,"prathamesh148","v4qpfh9XZmUHk@#");
+
 	s = c.createStatement();
 			
 	} catch(Exception e) {
